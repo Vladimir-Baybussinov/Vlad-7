@@ -12,14 +12,12 @@ class AutorizationPage(BasePage):
         super().__init__(browser)
 
     def open(self):
-        return self.browser.get('http://eda.ru')
-        implicitly_wait(20)
+        self.browser.get('http://eda.ru')
 
     def sing_in(self):
         self.find((By.XPATH, "//button[@class='emotion-fjxovz']")).click()
         sleep(5)
 
-    @property
     def post(self):
         self.find(login).click()
         return self.find(login).send_keys('vova_220403@mail.ru')

@@ -9,7 +9,7 @@ class FiltersPage1(BasePage):
         super().__init__(browser)
 
     def open(self):
-        return self.browser.get('http://eda.ru')
+        self.browser.get('https://eda.ru')
 
     def cat(self):
         self.find((By.XPATH, "//div[@class='emotion-1jy0sh8']")).click()

@@ -13,3 +13,5 @@ def browser():
     chrome_browser.maximize_window()
     return chrome_browser
 
+
+
