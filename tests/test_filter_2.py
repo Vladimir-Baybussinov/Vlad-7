@@ -1,10 +1,9 @@
 from time import sleep
 from pages.filter_2 import FiltersPage2
 import allure
-from test_autorization import authorized_browser
 
 
-def test_filter_2(browser, authorized_browser):
+def test_filter_2(browser):
     with allure.step('Test filter_2'):
         filters_page_2 = FiltersPage2(browser)
 

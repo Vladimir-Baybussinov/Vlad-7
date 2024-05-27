@@ -1,17 +1,10 @@
 from time import sleep
 
-import pytest
-from selenium.webdriver.common.by import By
+import allure
 
 from pages.autorization import AutorizationPage
 
-import allure
 
-
-@pytest.fixture()
-@allure.feature('Authorization')
-@allure.story("Authorization story")
-@allure.description('This test will perform authorization to the websie')
 def authorized_browser(browser):
     with allure.step("Open browser autorization page"):
         autorization_page = AutorizationPage(browser)
@@ -28,7 +21,7 @@ def authorized_browser(browser):
         browser.switch_to.window(new_window)
 
     with allure.step("Post"):
-        autorization_page.post
+        autorization_page.post()
 
     with allure.step("pas"):
         autorization_page.pas()
@@ -42,4 +35,4 @@ def authorized_browser(browser):
         browser.switch_to.window(original_window)
 
     return browser
-#########################################
+    #################################
