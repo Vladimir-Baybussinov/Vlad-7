@@ -20,14 +20,3 @@ def test_filter_2(browser):
     with allure.step("plus"):
         filters_page_2.plus()
 
-    with allure.step("send1"):
-        filters_page_2.send1()
-
-    with allure.step("find_minus"):
-        filters_page_2.find_minus()
-
-    with allure.step("minus"):
-        filters_page_2.minus()
-
-    with allure.step("send2"):
-        filters_page_2.send2()

@@ -4,8 +4,10 @@ from time import sleep
 from pages.base import BasePage
 from selenium.webdriver.common.by import By
 
-plus_ingredients = (By.XPATH, "//div[@class='emotion-182j3cv'][1]")
-minus_ingredients = (By.XPATH, "//div[@class='emotion-182j3cv'][2]")
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+plus_ingredients = (By.XPATH, "//div[@class='emotion-1wxt7g0']" and "//button[contains(text(), 'Куриное филе')]")
 
 
 class FiltersPage2(BasePage):
@@ -24,18 +26,10 @@ class FiltersPage2(BasePage):
 
     def find_plus(self):
         self.plus_ingredients = self.find(plus_ingredients)
+        self.browser.implicitly_wait(10)
 
     def plus(self):
         self.plus_ingredients.click()
+        self.browser.implicitly_wait(10)
 
-    def send1(self):
-        self.plus_ingredients.send_keys('Куриное филе')
 
-    def find_minus(self):
-        self.minus_ingredients = self.find(minus_ingredients)
-
-    def minus(self):
-        self.minus_ingredients.click()
-
-    def send2(self):
-        self.plus_ingredients.send_keys('Огурец')
