@@ -5,7 +5,7 @@ import allure
 from pages.autorization import AutorizationPage
 
 
-def authorized_browser(browser):
+def test_authorized_browser(browser):
     with allure.step("Open browser autorization page"):
         autorization_page = AutorizationPage(browser)
 
