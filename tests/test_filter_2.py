@@ -20,11 +20,11 @@ def test_filter_2(browser):
     with allure.step("plus"):
         filters_page_2.plus()
 
-   # with allure.step("type"):
-      #  filters_page_2.type()
+    with allure.step("type"):
+        filters_page_2.type()
 
-   # with allure.step("type2"):
-       # filters_page_2.type2()
+    with allure.step("type2"):
+        filters_page_2.type()
 
     with allure.step("search"):
         filters_page_2.search()

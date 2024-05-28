@@ -32,15 +32,12 @@ class FiltersPage2(BasePage):
         self.plus_ingredients.click()
         self.browser.implicitly_wait(10)
 
-    #def type(self):
-        #self.find((By.XPATH, "//div[@class='emotion-16rmb3']" "//contains[text(), 'Проверено «Едой»']")).click()
-
-    #def type2(self):
-       # self.find((By.XPATH, "//div[@class='emotion-16rmb3']" and "//contains[text(), 'Пошаговые рецепты']")).click()
+    def type(self):
+        sleep(5)
+        self.find((By.XPATH, "//div[@class='emotion-16rmb3']")).click()
+        sleep(2)
 
     def search(self):
         self.find((By.XPATH, "//button[@class='emotion-sjbikb']")).click()
-
-
 
 
