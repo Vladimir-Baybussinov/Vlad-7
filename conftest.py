@@ -3,7 +3,7 @@ from time import sleep
 from selenium import webdriver
 import pytest
 from selenium.webdriver.common.by import By
-from pages.autorization import AutorizationPage
+from pages.autorization_page import AutorizationPage
 
 
 @pytest.fixture()

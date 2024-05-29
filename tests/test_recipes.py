@@ -1,5 +1,5 @@
 from time import sleep
-from pages.recipes import RecopesPage
+from pages.recipes_page import RecopesPage
 import allure
 
 

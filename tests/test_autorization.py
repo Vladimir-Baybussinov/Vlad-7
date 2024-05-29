@@ -2,7 +2,7 @@ from time import sleep
 
 import allure
 
-from pages.autorization import AutorizationPage
+from pages.autorization_page import AutorizationPage
 
 
 def test_authorized_browser(browser):

@@ -1,5 +1,5 @@
 from time import sleep
-from pages.filter_1 import FiltersPage1
+from pages.filter_1_page import FiltersPage1
 import allure
 
 
