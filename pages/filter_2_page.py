@@ -84,3 +84,8 @@ class FiltersPage2(BasePage):
     def search(self):
         self.find((By.XPATH, "//button[@class='emotion-sjbikb']")).click()
 ################################################################
+
+    def test_url(self):
+        expected_url = "https://eda.ru/recepty/afishaeda/poshagovye-recepty/ingredienty/13439/13426/13544/eingredienty/15137/13427?isEdaChecked=true"
+        actual_url = self.browser.current_url
+        assert actual_url == expected_url, f"Expected {expected_url}, but got {actual_url}"

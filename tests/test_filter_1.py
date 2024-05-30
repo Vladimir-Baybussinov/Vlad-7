@@ -31,3 +31,4 @@ def test_filter_1(browser):
     with allure.step("back"):
         filters_page_1.back()
         sleep(3)
+

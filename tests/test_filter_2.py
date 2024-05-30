@@ -107,3 +107,7 @@ def test_filter_2(browser):
     with allure.step("search"):
         filters_page_2.search()
         sleep(2)
+
+
+    with allure.step("test_url"):
+        filters_page_2.test_url()

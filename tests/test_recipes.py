@@ -14,9 +14,14 @@ def test_recipes(browser):
     with allure.step("open_recopes"):
         recipes_page.open_recopes()
 
+    with allure.step("scroll"):
+        recipes_page.scroll()
+
     with allure.step("recipe_ingridients"):
         recipes_page.recipe_ingridients()
 
     with allure.step("portion_plus"):
         recipes_page.portion_plus()
+
+
 

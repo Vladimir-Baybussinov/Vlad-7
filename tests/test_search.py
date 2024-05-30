@@ -26,9 +26,12 @@ def test_search(browser):
         search_page.search_line_write()
 
     with allure.step("search_dropdown"):
-        search_page.search_dropdown()
+        search_page.product_find()
         sleep(5)
 
     with allure.step("search_choose_product"):
-        search_page.search_choose_product()
+        search_page.product_choose()
         sleep(5)
+
+    with allure.step("test_url"):
+        search_page.test_url()

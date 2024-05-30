@@ -3,8 +3,9 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 search = (By.XPATH, "//button[@class='emotion-144n0ca']")
-product = (By.XPATH, "//div[@class='emotion-1ttdbi2'][2]")
+product = (By.XPATH, "//span[@class='emotion-1jmyaem' and text()='Картофельное пюре']")
 search_line = (By.XPATH, "//input[@type='text']")
+
 
 class SearchPage(BasePage):
     def __init__(self, browser):
@@ -27,12 +28,15 @@ class SearchPage(BasePage):
         return self.search_line_find().click()
 
     def search_line_write(self):
-        return self.search_line_find().send_keys('картофель')
+        return self.search_line_find().send_keys('Картофель')
 
-    def search_dropdown(self):
+    def product_find(self):
         return self.find(product)
 
+    def product_choose(self):
+        return self.product_find().click()
 
-    def search_choose_product(self):
-        return self.search_dropdown().click()
-
+    def test_url(self):
+        expected_url = "https://eda.ru/recepty/osnovnye-blyuda/kartofelnoe-pjure-29188"
+        actual_url = self.browser.current_url
+        assert actual_url == expected_url, f"Expected {expected_url}, but got {actual_url}"

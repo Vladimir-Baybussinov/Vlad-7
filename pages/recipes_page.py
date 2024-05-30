@@ -14,6 +14,8 @@ class RecopesPage(BasePage):
     def open_recopes(self):
         self.find((By.XPATH, "//a[@class='emotion-1twuq6e' and text()='Рецепты']")).click()
 
+    def scroll(self):
+        self.browser.execute_script("window.scrollTo(0, 500)")
     def recipe_ingridients(self):
         sleep(1)
         self.find((By.XPATH, "//i[@class='emotion-1m3iuaz']")).click()
@@ -22,3 +24,5 @@ class RecopesPage(BasePage):
         sleep(3)
         self.find((By.XPATH, "//i[@class='emotion-p8s8gx']")).click()
         sleep(1)
+
+
