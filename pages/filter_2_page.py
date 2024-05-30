@@ -15,66 +15,66 @@ class FiltersPage2(BasePage):
     def __init__(self, browser):
         super().__init__(browser)
 
-    def open(self):
+    def open(self): # Переходим на страницу с расшыренным поиском
         self.browser.get('https://eda.ru')
         self.browser.refresh()
 
     ################################################################
-    def open_search(self):
+    def open_search(self): #Открываем расширенный поиск
         self.find((By.XPATH, "//span[text()='Ингредиенты, детали']")).click()
         sleep(2)
 
-    def add_ingred_find(self):
+    def add_ingred_find(self): #Находим строку поиска ингредиента
         self.browser.implicitly_wait(10)
         return self.find(add_ingredients)
 
-    def add_ingredients_click(self):
+    def add_ingredients_click(self):#Нажимаем на строку поиска ингредиента
         return self.add_ingred_find().click()
 
-    def add_ingredients_send_text(self):
+    def add_ingredients_send_text(self): #Добавляем ингредиент в строку поиска
         return self.add_ingred_find().send_keys('Помидоры')
 
-    def add_ingredients_send_text_2(self):
+    def add_ingredients_send_text_2(self): #Добавляем ингредиент в строку поиска
         return self.add_ingred_find().send_keys('Сыр')
 
-    def find_ingredient_dropdown(self):
+    def find_ingredient_dropdown(self): #Находим выпадающий список ингредиентов
         return self.find(ingreditent)
 
-    def choose_ingredient(self):
+    def choose_ingredient(self): #Выбираем ингредиент из выпадающего списка
         return self.find_ingredient_dropdown().click()
 
     ################################################################
-    def popular_ingredients_find(self):
+    def popular_ingredients_find(self): #Находим кнопку с названием ингредиента
         return self.find(popular_ingredients)
 
-    def popular_ingredients_click(self):
+    def popular_ingredients_click(self): #Нажимаем на кнопку с названием ингредиента
         return self.popular_ingredients_find().click()
 
-    def type_find(self):
+    def type_find(self): #Находим кнопку с типом ингредиента
         return self.find(type)
 
-    def type_click(self):
+    def type_click(self): #Нажимаем на кнопку с типом ингредиента
         return self.type_find().click()
 
 
 
 
-    def del_ingredients_find(self):
+    def del_ingredients_find(self): #Находим строку поиска ингредиента
         return self.find(del_ingredients)
 
-    def del_ingredients_click(self):
+    def del_ingredients_click(self): #Нажимаем на строку поиска ингредиента
         return self.del_ingredients_find().click()
 
-    def del_ingredients_send_text(self):
+    def del_ingredients_send_text(self): #Добавляем ингредиент в строку поиска
         return self.del_ingredients_find().send_keys('Огурцы')
 
-    def del_ingredients_send_text_2(self):
+    def del_ingredients_send_text_2(self): #Добавляем ингредиент в строку поиска
         return self.del_ingredients_find().send_keys('Лимон')
 
-    def del_find_ingredients_dropdown(self):
+    def del_find_ingredients_dropdown(self): #Находим выпадающий список ингредиентов
         return self.find(ingreditent)
 
-    def del_choose_ingredient(self):
+    def del_choose_ingredient(self): #Выбираем ингредиент из выпадающего списка
         return self.del_find_ingredients_dropdown().click()
 
 
@@ -83,6 +83,9 @@ class FiltersPage2(BasePage):
 
     def search(self):
         self.find((By.XPATH, "//button[@class='emotion-sjbikb']")).click()
+
+    def scroll(self):  # Прокручиваем страницу
+        self.browser.execute_script("window.scrollTo(0, 500)")
 ################################################################
 
     def test_url(self):

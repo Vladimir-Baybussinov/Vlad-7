@@ -28,6 +28,10 @@ def test_filter_1(browser):
         filters_page_1.search()
         sleep(2)
 
+    with allure.step("scroll"):
+        filters_page_1.scroll()
+        sleep(2)
+
     with allure.step("back"):
         filters_page_1.back()
         sleep(3)

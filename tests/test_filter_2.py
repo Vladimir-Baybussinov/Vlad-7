@@ -27,11 +27,7 @@ def test_filter_2(browser):
         filters_page_2.choose_ingredient()
         sleep(2)
 
-
-#
-
-
-
+    #
 
     ################################
 
@@ -49,21 +45,17 @@ def test_filter_2(browser):
 
     ################################################
 
-
     with allure.step("del_ingredients_find"):
         filters_page_2.del_ingredients_find()
 
     with allure.step("del_ingredients_click"):
         filters_page_2.del_ingredients_click()
 
-
     with allure.step("del_ingredients_send_text"):
         filters_page_2.del_ingredients_send_text()
 
-
     with allure.step("del_ingredients_choose_ingredient"):
         filters_page_2.del_choose_ingredient()
-
 
         #################################################
     with allure.step("del_ingredients_find_limon"):
@@ -72,10 +64,8 @@ def test_filter_2(browser):
     with allure.step("del_ingredients_click_limon"):
         filters_page_2.del_ingredients_click()
 
-
     with allure.step("del_ingredients_send_text_2"):
         filters_page_2.del_ingredients_send_text_2()
-
 
     with allure.step("del_ingredients_choose_ingredient_limon"):
         filters_page_2.del_choose_ingredient()
@@ -108,6 +98,8 @@ def test_filter_2(browser):
         filters_page_2.search()
         sleep(2)
 
+    with allure.step("scroll"):
+        filters_page_2.scroll()
 
     with allure.step("test_url"):
         filters_page_2.test_url()
